@@ -1,13 +1,44 @@
 .layout-mobile {
-    position: relative;
-    width: 360px;
-    min-height: 100vh;
-    margin: 0 auto;
-    background: #f7f7f7;
+  position: relative;
+  width: 360px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #f7f7f7;
+}
+
+.footer {
+  width: 100%;
+  min-height: 126px;
+  background: #009844;
+  padding: 16px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+  display: flex;
+  justify-content: space-between;
+  .info {
+    p {
+      color: #fff;
+      font-family: Open Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      &:first-child {
+        color: #fff;
+        font-family: Open Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 425px) {
-   .layout-mobile {
+  .layout-mobile {
     width: 100%;
-   }
+  }
 }

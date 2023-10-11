@@ -1,0 +1,33 @@
+.product-card {
+  border-radius: 4px;
+  padding: 8px;
+  background: #fff;
+  width: 148px;
+  min-height: 172px;
+  .image {
+    width: 100%;
+    img {
+      border-radius: 4px;
+    }
+  }
+  .desc {
+    margin-top: 6px;
+    .title h2 {
+      color: #242121;
+      font-family: Open Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .price p {
+        margin-top: 4px;
+      color: #ff6915;
+      font-family: Open Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}
