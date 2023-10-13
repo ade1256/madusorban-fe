@@ -1,8 +1,20 @@
+"use client";
+
 import LayoutMobile from "@/layout/Layout.mobile";
 import "./home.style.scss";
 import Logo from "../assets/images/logo.svg";
 import ImageMaduKids from "../assets/images/madukids.png"
 import ProductCard from "@/components/ProductCard";
+import ImageMaduBawang from "../assets/images/Madu Bawang 1-min.jpg"
+import ImageMaduBesar from "../assets/images/Madu Besar 2-min.jpg"
+import ImageMaduFamily from "../assets/images/Madu Family-min.jpg"
+import ImageMaduHitam from "../assets/images/Madu Hitam 1-min.jpg"
+import ImageMaduKecil from "../assets/images/Madu Kecil 3-min.jpg"
+import ImageMaduSedang from "../assets/images/Madu Sedang 2-min.jpg"
+import ImageMaduSabun from "../assets/images/Sabun 3-min.jpg"
+import ImageMaduRoyalJelly from "../assets/images/Madu Royal Jelly 1-min.jpg"
+import ImageMaduPromil from "../assets/images/Madu Promil-min.jpg"
+import ImageMaduCombani from "../assets/images/Madu Combani 3-min.jpg"
 
 const HomePage = () => {
   const products = [
@@ -12,16 +24,81 @@ const HomePage = () => {
       imageUrl: ImageMaduKids.src
     },
     {
-      title: 'Madu for Kids',
-      price: 60000,
-      imageUrl: ImageMaduKids.src
+      title: 'Madu Bawang Lanang',
+      price: 300000,
+      imageUrl: ImageMaduBawang.src
     },
     {
-      title: 'Madu for Kids',
-      price: 60000,
-      imageUrl: ImageMaduKids.src
-    }
+      title: 'Madu Murni Besar',
+      price: 250000,
+      imageUrl: ImageMaduBesar.src
+    },
+    {
+      title: 'Madu Murni Kecil',
+      price: 150000,
+      imageUrl: ImageMaduKecil.src
+    },
+    {
+      title: 'Madu Murni Sedang',
+      price: 200000,
+      imageUrl: ImageMaduSedang.src
+    },
+    {
+      title: 'Madu Family 3 in 1',
+      price: 500000,
+      imageUrl: ImageMaduFamily.src
+    },
+    {
+      title: 'Madu Hitam Besar',
+      price: 800000,
+      imageUrl: ImageMaduHitam.src
+    },
+    {
+      title: 'Madu Hitam Sedang',
+      price: 600000,
+      imageUrl: ImageMaduHitam.src
+    },
+    {
+      title: 'Madu Hitam Kecil',
+      price: 350000,
+      imageUrl: ImageMaduHitam.src
+    },
+    {
+      title: 'Madu Sabun',
+      price: 50000,
+      imageUrl: ImageMaduSabun.src
+    },
+    {
+      title: 'Madu Royal Jelly',
+      price: 400000,
+      imageUrl: ImageMaduRoyalJelly.src
+    },
+    {
+      title: 'Madu Promil',
+      price: 350000,
+      imageUrl: ImageMaduPromil.src
+    },
+    {
+      title: 'Madu Combani Besar',
+      price: 350000,
+      imageUrl: ImageMaduCombani.src
+    },
+    {
+      title: 'Madu Combani Kecil',
+      price: 250000,
+      imageUrl: ImageMaduCombani.src
+    },
   ]
+
+  const handleClickBeli = (itemName: any = '') => {
+    if (typeof window !== 'undefined') {
+      if(itemName === '') {
+        window.location.href = `https://api.whatsapp.com/send?phone=6281215689928&text=Halo%20saya%20ingin%20membeli%20MADU%2C%0ASaya%20dapat%20info%20dari%20website%20Madu%20Sorban%2C%20mohon%20pesan%20ini%20dibalas%20secepatnya.%20Terima%20kasih.`;
+      } else {
+        window.location.href = `https://api.whatsapp.com/send?phone=6281215689928&text=Halo%20saya%20ingin%20membeli%20${itemName}%2C%0ASaya%20dapat%20info%20dari%20website%20Madu%20Sorban%2C%20mohon%20pesan%20ini%20dibalas%20secepatnya.%20Terima%20kasih.`;
+      }
+    }
+  }
   return (
     <LayoutMobile>
       <div className="hero">
@@ -39,9 +116,9 @@ const HomePage = () => {
               pengetahuan tentang madu, yang berguna menambah wawasan.
             </p>
             <div className="text-center relative w-fit mx-auto my-0">
-            <button className="btn btn-primary">Beli Sekarang</button>
+            <button className="btn btn-primary" onClick={() => handleClickBeli('')}>Beli Sekarang</button>
             <span className="text-white text-center text-xs not-italic font-normal leading-[normal]">atau</span>
-            <button className="btn btn-link relative mx-auto my-0">
+            <button className="btn btn-link relative mx-auto my-0" onClick={() => handleClickBeli('')}>
               Beli via Whatsapp{" "}
               <span className="icon">
                 <svg
@@ -109,6 +186,7 @@ const HomePage = () => {
                 price={product.price}
                 image={product.imageUrl}
                 key={index}
+                onClick={() => handleClickBeli(product.title)}
               />
             ))
           }
@@ -131,9 +209,9 @@ const HomePage = () => {
       <div className="cta-section">
         <h3>PESAN SEKARANG DAN KIRIM SEKARANG</h3>
         <div className="text-center relative w-fit mx-auto my-0 pt-4">
-            <button className="btn btn-primary">Beli Sekarang</button>
+            <button className="btn btn-primary" onClick={() => handleClickBeli('')}>Beli Sekarang</button>
             <span className="text-white text-center text-xs not-italic font-normal leading-[normal]">atau</span>
-            <button className="btn btn-link relative mx-auto my-0">
+            <button className="btn btn-link relative mx-auto my-0" onClick={() => handleClickBeli('')}>
               Beli via Whatsapp{" "}
               <span className="icon">
                 <svg
