@@ -1,9 +1,13 @@
 import "./style.scss";
+import ImageContact from "@/assets/images/contact.jpeg"
 
 const LayoutMobile = ({ children }: any) => {
   return (
     <div className="layout-mobile">
       <div className="content">{children}</div>
+      <div className="contact">
+        <img src={ImageContact.src} alt="Contact person pembelian" />
+      </div>
       <div className="footer">
         <div className="info">
           <p>SERTIFIKASI SPP-IRT</p>

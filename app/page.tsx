@@ -3,93 +3,17 @@
 import LayoutMobile from "@/layout/Layout.mobile";
 import "./home.style.scss";
 import Logo from "../assets/images/logo.svg";
-import ImageMaduKids from "../assets/images/madukids.png"
 import ProductCard from "@/components/ProductCard";
-import ImageMaduBawang from "../assets/images/Madu Bawang 1-min.jpg"
-import ImageMaduBesar from "../assets/images/Madu Besar 2-min.jpg"
-import ImageMaduFamily from "../assets/images/Madu Family-min.jpg"
-import ImageMaduHitam from "../assets/images/Madu Hitam 1-min.jpg"
-import ImageMaduKecil from "../assets/images/Madu Kecil 3-min.jpg"
-import ImageMaduSedang from "../assets/images/Madu Sedang 2-min.jpg"
-import ImageMaduSabun from "../assets/images/Sabun 3-min.jpg"
-import ImageMaduRoyalJelly from "../assets/images/Madu Royal Jelly 1-min.jpg"
-import ImageMaduPromil from "../assets/images/Madu Promil-min.jpg"
-import ImageMaduCombani from "../assets/images/Madu Combani 3-min.jpg"
+import ImageErick1 from "../assets/images/erick1.jpeg"
+import ImageErick2 from "../assets/images/erick2.jpeg"
+import ImageContact from "../assets/images/contact.jpeg"
+import ImageLab1 from "../assets/images/lab1.jpeg"
+import ImageLab2 from "../assets/images/lab2.jpeg"
+import { products } from "./products";
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
-  const products = [
-    {
-      title: 'Madu for Kids',
-      price: 60000,
-      imageUrl: ImageMaduKids.src
-    },
-    {
-      title: 'Madu Bawang Lanang',
-      price: 300000,
-      imageUrl: ImageMaduBawang.src
-    },
-    {
-      title: 'Madu Murni Besar',
-      price: 250000,
-      imageUrl: ImageMaduBesar.src
-    },
-    {
-      title: 'Madu Murni Kecil',
-      price: 150000,
-      imageUrl: ImageMaduKecil.src
-    },
-    {
-      title: 'Madu Murni Sedang',
-      price: 200000,
-      imageUrl: ImageMaduSedang.src
-    },
-    {
-      title: 'Madu Family 3 in 1',
-      price: 500000,
-      imageUrl: ImageMaduFamily.src
-    },
-    {
-      title: 'Madu Hitam Besar',
-      price: 800000,
-      imageUrl: ImageMaduHitam.src
-    },
-    {
-      title: 'Madu Hitam Sedang',
-      price: 600000,
-      imageUrl: ImageMaduHitam.src
-    },
-    {
-      title: 'Madu Hitam Kecil',
-      price: 350000,
-      imageUrl: ImageMaduHitam.src
-    },
-    {
-      title: 'Madu Sabun',
-      price: 50000,
-      imageUrl: ImageMaduSabun.src
-    },
-    {
-      title: 'Madu Royal Jelly',
-      price: 400000,
-      imageUrl: ImageMaduRoyalJelly.src
-    },
-    {
-      title: 'Madu Promil',
-      price: 350000,
-      imageUrl: ImageMaduPromil.src
-    },
-    {
-      title: 'Madu Combani Besar',
-      price: 350000,
-      imageUrl: ImageMaduCombani.src
-    },
-    {
-      title: 'Madu Combani Kecil',
-      price: 250000,
-      imageUrl: ImageMaduCombani.src
-    },
-  ]
-
+  const router = useRouter()
   const handleClickBeli = (itemName: any = '') => {
     if (typeof window !== 'undefined') {
       if(itemName === '') {
@@ -178,6 +102,7 @@ const HomePage = () => {
       </div>
       <div className="products">
         <h3>Jenis Produk</h3>
+        <p className="text-xs mt-2 text-center">Pilih menu di bawah untuk melihat lebih lanjut manfaat dan khasiat madu</p>
         <div className="list-products">
           {
             products.map((product: any, index: any) => (
@@ -186,13 +111,20 @@ const HomePage = () => {
                 price={product.price}
                 image={product.imageUrl}
                 key={index}
-                onClick={() => handleClickBeli(product.title)}
+                onClick={() => router.push(`/product/${product.slug}`)}
               />
             ))
           }
         </div>
       </div>
       <div className="about">
+      <div className="info">
+          <h3>Kualitas Madu Sorban Terjamin Murni!</h3>
+          <p>1. Madu Sorban adalah madu asli yang memiliki berbagai jenis varian dengan manfaat tertentu untuk menyembuhkan penyakit, menambah kesehatan, meningkatkan imunitas tubuh dan lain lain.</p>
+          <p>2. Produk yang tersedia di atas memiliki manfaat yang berbeda, semua produk menggunakan bahan dasar madu asli tanpa campuran gula buatan sedikitpun sehingga sangat aman dikonsumsi dan bebas dari penyakit diabetes. .</p>
+          <p>3. Kualitas Madu Sorban justru dapat mencegah diabetes karena kandungan pada madu murni yang dapat menyembuhkan berbagai penyakit kronis seperti madu hitam yang dapat menyembuhkan diabetes, kanker, jantung koroner, stroke, dan lain lain.</p>
+          <p>4. Silahkan klik menu produk untuk mengetahui manfaat lebih lanjut di setiap produk di atas.</p>
+        </div>
         <div className="info">
           <h3>KANDUNGAN MADU</h3>
           <p>Kandungan zat yang terdapat pada madu adalah sebagai berikut Fruktosa, Glukosa, Maltosa, Sukrosa, Vitamin B2 B3 B9, lemak, air, zat besi, enzime, dan lainnya.</p>
@@ -204,6 +136,20 @@ const HomePage = () => {
           <p>3. Dengan mengolesi kepala (belerang) korek api dengan madu, setelah 1 jam seharusnya korek api akan tetap bisa menyala.</p>
           <p>4. Dengan mencampur 1 sdm madu dengan kuning telur ayam mentah, kuning telur akan mengental / mengkristal berbiji atau matang.</p>
           <p>5. Simpan madu dalam lemari freezer es, madu asli tidak akan beku dan hanya akan mengental.</p>
+        </div>
+      </div>
+      <div className="">
+        <div className="">
+          <img src={ImageLab1.src} alt="Bukti laboratorium Madu Sorban Murni" />
+        </div>
+        <div className="">
+          <img src={ImageLab2.src} alt="Bukti laboratorium Madu Sorban Murni Halal" />
+        </div>
+        <div className="">
+          <img src={ImageErick1.src} alt="Eric Thohir Membeli Madu Sorban bersama teman teman" />
+        </div>
+        <div className="">
+          <img src={ImageErick2.src} alt="Eric Thohir Membeli Madu Sorban" />
         </div>
       </div>
       <div className="cta-section">
