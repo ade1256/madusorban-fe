@@ -45,7 +45,7 @@ const DetailProduct = (props: any) => {
           className="about"
           dangerouslySetInnerHTML={{ __html: product.info }}
         />
-        <div className="cta-section">
+        <div className="cta-section-detail-page">
         <h3 className="text-black">PESAN SEKARANG DAN KIRIM SEKARANG</h3>
         <div className="text-center relative w-fit mx-auto my-0 pt-4 flex items-center flex-nowrap flex-row gap-4">
             <button className="btn btn-primary" onClick={() => handleClickBeli(product.title)}>Beli Sekarang</button>
