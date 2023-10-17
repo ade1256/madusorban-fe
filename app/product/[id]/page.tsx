@@ -42,7 +42,7 @@ const DetailProduct = (props: any) => {
             {rupiah(product.price)}
         </div>
         <div
-          className="about"
+          className="about-detail"
           dangerouslySetInnerHTML={{ __html: product.info }}
         />
         <div className="cta-section-detail-page">
