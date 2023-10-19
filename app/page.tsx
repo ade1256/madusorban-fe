@@ -122,7 +122,7 @@ const HomePage = () => {
       <div className="info">
           <h3>Kualitas Madu Sorban Terjamin Murni!</h3>
           <p>1. Madu Sorban adalah madu asli yang memiliki berbagai jenis varian dengan manfaat tertentu untuk menyembuhkan penyakit, menambah kesehatan, meningkatkan imunitas tubuh dan lain lain.</p>
-          <p>2. Produk yang tersedia di atas memiliki manfaat yang berbeda, semua produk menggunakan bahan dasar madu asli tanpa campuran gula buatan sedikitpun sehingga sangat aman dikonsumsi dan bebas dari penyakit diabetes. .</p>
+          <p>2. Produk yang tersedia di atas memiliki manfaat yang berbeda, semua produk menggunakan bahan dasar madu asli tanpa campuran gula buatan sedikitpun sehingga sangat aman dikonsumsi dan bebas dari penyakit diabetes.</p>
           <p>3. Kualitas Madu Sorban justru dapat mencegah diabetes karena kandungan pada madu murni yang dapat menyembuhkan berbagai penyakit kronis seperti madu hitam yang dapat menyembuhkan diabetes, kanker, jantung koroner, stroke, dan lain lain.</p>
           <p>4. Silahkan klik menu produk untuk mengetahui manfaat lebih lanjut di setiap produk di atas.</p>
         </div>
