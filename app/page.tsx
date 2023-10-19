@@ -108,6 +108,7 @@ const HomePage = () => {
             products.map((product: any, index: any) => (
               <ProductCard
                 title={product.title}
+                originalPrice={product.originalPrice}
                 price={product.price}
                 image={product.imageUrl}
                 key={index}
