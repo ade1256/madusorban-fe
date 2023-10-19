@@ -44,7 +44,7 @@ const HomePage = () => {
             <span className="text-white text-center text-xs not-italic font-normal leading-[normal]">atau</span>
             <button className="btn btn-link relative mx-auto my-0" onClick={() => handleClickBeli('')}>
               Beli via Whatsapp{" "}
-              <span className="icon">
+              <span className="icon ml-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="14"
@@ -102,7 +102,7 @@ const HomePage = () => {
       </div>
       <div className="products">
         <h3>Jenis Produk</h3>
-        <p className="text-xs mt-2 text-center">Pilih menu di bawah untuk melihat lebih lanjut manfaat dan khasiat madu</p>
+        <p className="text-sm mt-2 text-center">Pilih menu di bawah untuk melihat lebih lanjut manfaat dan khasiat madu</p>
         <div className="list-products">
           {
             products.map((product: any, index: any) => (
@@ -159,7 +159,7 @@ const HomePage = () => {
             <span className="text-white text-center text-xs not-italic font-normal leading-[normal]">atau</span>
             <button className="btn btn-link relative mx-auto my-0" onClick={() => handleClickBeli('')}>
               Beli via Whatsapp{" "}
-              <span className="icon">
+              <span className="icon ml-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="14"
