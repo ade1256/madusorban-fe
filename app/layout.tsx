@@ -29,6 +29,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         ></link>
+        <meta name="facebook-domain-verification" content="znm0d8s0bd3yr4g7o9fkhszj4wzj1z" />
         <Script
         id="facebook-pixel"
           strategy="afterInteractive"
