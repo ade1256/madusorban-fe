@@ -30,6 +30,7 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
         <Script
+        id="facebook-pixel"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `!function(f,b,e,v,n,t,s)
