@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import "./detailpage.style.scss";
 import LayoutMobile from "@/layout/Layout.mobile";
+import ReactPixel from "react-facebook-pixel";
 
 const DetailProduct = (props: any) => {
   const router = useRouter();
@@ -32,6 +33,11 @@ const DetailProduct = (props: any) => {
   useEffect(() => {
     const product = products.filter((item) => item.slug === slug)[0];
     setProduct(product);
+  }, []);
+
+  useEffect(() => {
+    ReactPixel.init("345126648004160");
+    ReactPixel.pageView();
   }, []);
   return (
     <LayoutMobile>
