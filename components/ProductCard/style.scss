@@ -30,6 +30,10 @@
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+      &.strike {
+        color: #333;
+        text-decoration: line-through;
+      }
     }
   }
 }

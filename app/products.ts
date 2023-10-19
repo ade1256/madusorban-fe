@@ -14,6 +14,7 @@ export const products = [
   {
     title: "Madu for Kids",
     slug: "madu-for-kids",
+    originalPrice: 80000,
     price: 60000,
     imageUrl: ImageMaduKids.src,
     info: `
@@ -29,6 +30,7 @@ export const products = [
   {
     title: "Madu Bawang Lanang",
     slug: "madu-bawang-lanang",
+    originalPrice: 350000,
     price: 300000,
     imageUrl: ImageMaduBawang.src,
     info: `
@@ -49,6 +51,7 @@ export const products = [
   {
     title: "Madu Murni Besar",
     slug: "madu-murni-besar",
+    originalPrice: 300000,
     price: 250000,
     imageUrl: ImageMaduBesar.src,
     info: `
@@ -67,6 +70,7 @@ export const products = [
   {
     title: "Madu Murni Kecil",
     slug: "madu-murni-kecil",
+    originalPrice: 200000,
     price: 150000,
     imageUrl: ImageMaduKecil.src,
     info: `
@@ -84,6 +88,7 @@ export const products = [
   {
     title: "Madu Murni Sedang",
     slug: "madu-murni-sedang",
+    originalPrice: 250000,
     price: 200000,
     imageUrl: ImageMaduSedang.src,
     info: `
@@ -101,6 +106,7 @@ export const products = [
   {
     title: "Madu Family 3 in 1",
     slug: "madu-family-3-in-1",
+    originalPrice: 700000,
     price: 500000,
     imageUrl: ImageMaduFamily.src,
     info: `
@@ -118,6 +124,7 @@ export const products = [
   {
     title: "Madu Hitam Besar",
     slug: "madu-hitam-besar",
+    originalPrice: 900000,
     price: 800000,
     imageUrl: ImageMaduHitam.src,
     info: `
@@ -143,6 +150,7 @@ export const products = [
   {
     title: "Madu Hitam Sedang",
     slug: "madu-hitam-sedang",
+    originalPrice: 800000,
     price: 600000,
     imageUrl: ImageMaduHitam.src,
     info: `
@@ -168,6 +176,7 @@ export const products = [
   {
     title: "Madu Hitam Kecil",
     slug: "madu-hitam-kecil",
+    originalPrice: 450000,
     price: 350000,
     imageUrl: ImageMaduHitam.src,
     info: `
@@ -193,6 +202,7 @@ export const products = [
   {
     title: "Madu Sabun",
     slug: "madu-sabun",
+    originalPrice: 80000,
     price: 50000,
     imageUrl: ImageMaduSabun.src,
     info: `
@@ -214,6 +224,7 @@ Cara pemakaian :</br>
   {
     title: "Madu Royal Jelly",
     slug: "madu-royal-jelly",
+    originalPrice: 500000,
     price: 400000,
     imageUrl: ImageMaduRoyalJelly.src,
     info: `
@@ -232,6 +243,7 @@ Cara pemakaian :</br>
   {
     title: "Madu Promil",
     slug: "madu-program-hamil-promil",
+    originalPrice: 450000,
     price: 350000,
     imageUrl: ImageMaduPromil.src,
     info: `
@@ -250,6 +262,7 @@ Cara pemakaian :</br>
   {
     title: "Madu Combani Besar",
     slug: "madu-combani-besar",
+    originalPrice: 450000,
     price: 350000,
     imageUrl: ImageMaduCombani.src,
     info: `
@@ -269,6 +282,7 @@ Cara pemakaian :</br>
   {
     title: "Madu Combani Kecil",
     slug: "madu-combani-kecil",
+    originalPrice: 350000,
     price: 250000,
     imageUrl: ImageMaduCombani.src,
     info: `

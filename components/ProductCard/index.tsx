@@ -1,5 +1,5 @@
 import "./style.scss"
-const ProductCard = ({ title = "", price = 0, image = '', onClick = () => null }: any) => {
+const ProductCard = ({ title = "", originalPrice = 0, price = 0, image = '', onClick = () => null }: any) => {
   const rupiah = (number: number)=>{
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
@@ -17,6 +17,7 @@ const ProductCard = ({ title = "", price = 0, image = '', onClick = () => null }
           <h2>{title}</h2>
         </div>
         <div className="price">
+          <p className="strike">{rupiah(originalPrice)}</p>
           <p>{rupiah(price)}</p>
         </div>
       </div>

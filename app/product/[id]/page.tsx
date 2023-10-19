@@ -39,7 +39,7 @@ const DetailProduct = (props: any) => {
         <h2>{product.title}</h2>
         <img className="image" src={product.imageUrl} />
         <div className="price">
-            {rupiah(product.price)}
+            <span className="strike">{rupiah(product.originalPrice)}</span> {rupiah(product.price)}
         </div>
         <div
           className="about-detail"
