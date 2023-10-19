@@ -11,13 +11,16 @@ const DetailProduct = (props: any) => {
   const slug = props.params.id;
   const [product, setProduct] = useState<any>({});
 
-  const handleClickBeli = (itemName: any = '') => {
+  const handleClickBeli = async (product: any) => {
     if (typeof window !== 'undefined') {
-      if(itemName === '') {
-        window.location.href = `https://api.whatsapp.com/send?phone=6281215689928&text=Halo%20saya%20ingin%20membeli%20MADU%2C%0ASaya%20dapat%20info%20dari%20website%20Madu%20Sorban%2C%20mohon%20pesan%20ini%20dibalas%20secepatnya.%20Terima%20kasih.`;
-      } else {
-        window.location.href = `https://api.whatsapp.com/send?phone=6281215689928&text=Halo%20saya%20ingin%20membeli%20${itemName}%2C%0ASaya%20dapat%20info%20dari%20website%20Madu%20Sorban%2C%20mohon%20pesan%20ini%20dibalas%20secepatnya.%20Terima%20kasih.%0A%0AFormat%20pemesanan%0A%0ANama%20Lengkap%20%3A%0ANo%20HP%20%3A%0AAlamat%20lengkap%20%3A`;
-      }
+      const { default: ReactPixel } = await import("react-facebook-pixel");
+      ReactPixel.trackSingleCustom("345126648004160", "Purchase", {
+        value: product.price,
+        currency: 'IDR',
+        content_type: 'product',
+        content_name: product.title
+      });
+      window.location.href = `https://api.whatsapp.com/send?phone=6281215689928&text=Halo%20saya%20ingin%20membeli%20${product.title}%2C%0ASaya%20dapat%20info%20dari%20website%20Madu%20Sorban%2C%20mohon%20pesan%20ini%20dibalas%20secepatnya.%20Terima%20kasih.%0A%0AFormat%20pemesanan%0A%0ANama%20Lengkap%20%3A%0ANo%20HP%20%3A%0AAlamat%20lengkap%20%3A`;
     }
   }
 
@@ -42,7 +45,7 @@ const DetailProduct = (props: any) => {
         debug: true,
       });
       ReactPixel.pageView();
-      ReactPixel.track("ViewContent");
+      ReactPixel.trackSingleCustom("345126648004160","ViewContent");
     };
     init();
   });
@@ -61,9 +64,9 @@ const DetailProduct = (props: any) => {
         <div className="cta-section-detail-page">
         <h3 className="text-black">PESAN SEKARANG DAN KIRIM SEKARANG</h3>
         <div className="text-center relative w-fit mx-auto my-0 pt-4 flex items-center flex-nowrap flex-row gap-4">
-            <button className="btn btn-primary" onClick={() => handleClickBeli(product.title)}>Beli Sekarang</button>
+            <button className="btn btn-primary" onClick={() => handleClickBeli(product)}>Beli Sekarang</button>
             <span className="text-black text-center text-xs not-italic font-normal leading-[normal]">atau</span>
-            <button className="btn btn-link relative mx-auto my-0" onClick={() => handleClickBeli(product.title)}>
+            <button className="btn btn-link relative mx-auto my-0" onClick={() => handleClickBeli(product)}>
               Beli via Whatsapp{" "}
               <span className="icon ml-1">
                 <svg
