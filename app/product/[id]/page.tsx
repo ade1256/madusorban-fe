@@ -33,6 +33,19 @@ const DetailProduct = (props: any) => {
     const product = products.filter((item) => item.slug === slug)[0];
     setProduct(product);
   }, []);
+
+  useEffect(() => {
+    const init = async () => {
+      const { default: ReactPixel } = await import("react-facebook-pixel");
+      ReactPixel.init("345126648004160", undefined, {
+        autoConfig: true,
+        debug: true,
+      });
+      ReactPixel.pageView();
+      ReactPixel.track("ViewContent");
+    };
+    init();
+  });
   return (
     <LayoutMobile>
       <div className="content-detail">
